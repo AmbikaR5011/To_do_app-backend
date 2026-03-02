@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # To-do App — Quick Start
 
 Quick checklist
@@ -209,3 +210,6 @@ If you want, I can:
 
 Please tell me if you want the Docker compose or sample dev properties added.
 
+=======
+# To_do_app-backend
+>>>>>>> 97872645902a81350fef100399969177e192bf12

@@ -1,7 +1,6 @@
 services:
   - type: web
     name: to-do-app
-    runtime: java
 
     buildCommand: chmod +x mvnw && ./mvnw clean package
 
@@ -15,7 +14,7 @@ services:
         value: uutwjquika7ejke3
 
       - key: DATABASE_PASSWORD
-        sync: false   # 🔐 IMPORTANT (set manually in Render dashboard)
+        sync: false
 
       - key: PORT
         value: 8080

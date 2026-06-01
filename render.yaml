@@ -2,8 +2,7 @@ services:
   - type: web
     name: to-do-app
 
-    buildCommand: chmod +x mvnw && ./mvnw clean package
-
+    buildCommand: ./mvnw clean package
     startCommand: java -jar target/to-do-app-0.0.1-SNAPSHOT.jar
 
     envVars:

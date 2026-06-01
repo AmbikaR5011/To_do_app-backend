@@ -2,14 +2,20 @@ services:
   - type: web
     name: to-do-app
     runtime: java
-    buildCommand: mvn clean package
+
+    buildCommand: chmod +x mvnw && ./mvnw clean package
+
     startCommand: java -jar target/to-do-app-0.0.1-SNAPSHOT.jar
+
     envVars:
       - key: DATABASE_URL
         value: jdbc:mysql://bc89oy91s6zzslwkc5nm-mysql.services.clever-cloud.com:3306/bc89oy91s6zzslwkc5nm?useSSL=true&requireSSL=true
+
       - key: DATABASE_USERNAME
         value: uutwjquika7ejke3
+
       - key: DATABASE_PASSWORD
-        value: VSchmfKqJ2oGDtEugNmF
+        sync: false   # 🔐 IMPORTANT (set manually in Render dashboard)
+
       - key: PORT
         value: 8080

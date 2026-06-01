@@ -2,6 +2,8 @@ services:
   - type: web
     name: to-do-app
 
+    env: docker   # ✅ important fix
+
     buildCommand: ./mvnw clean package
     startCommand: java -jar target/to-do-app-0.0.1-SNAPSHOT.jar
 
@@ -13,7 +15,7 @@ services:
         value: uutwjquika7ejke3
 
       - key: DATABASE_PASSWORD
-        sync: false
+        sync: false   # you will enter manually in Render dashboard
 
       - key: PORT
         value: 8080

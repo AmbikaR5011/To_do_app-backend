@@ -1,21 +1,13 @@
 services:
   - type: web
     name: to-do-app
-
-    env: docker   # ✅ important fix
-
+    runtime: java
     buildCommand: ./mvnw clean package
     startCommand: java -jar target/to-do-app-0.0.1-SNAPSHOT.jar
-
     envVars:
       - key: DATABASE_URL
-        value: jdbc:mysql://bc89oy91s6zzslwkc5nm-mysql.services.clever-cloud.com:3306/bc89oy91s6zzslwkc5nm?useSSL=true&requireSSL=true
-
+        value: jdbc:mysql://REPLACE_CLEVER_HOST:3306/REPLACE_DB_NAME?useSSL=true&requireSSL=true
       - key: DATABASE_USERNAME
-        value: uutwjquika7ejke3
-
+        value: REPLACE_DB_USERNAME
       - key: DATABASE_PASSWORD
-        sync: false   # you will enter manually in Render dashboard
 
-      - key: PORT
-        value: 8080
